@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinimalMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="あいうえお" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Im-vT-0yU">
+                                <rect key="frame" x="75" y="70" width="225" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="6fp-FQ-0aS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1v-yr-VJS">
+                                <rect key="frame" x="75" y="150" width="225" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z1v-yr-VJS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Im-vT-0yU" secondAttribute="leading" id="AvX-Oa-3tj"/>
+                            <constraint firstItem="z1v-yr-VJS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Im-vT-0yU" secondAttribute="trailing" id="Jjs-32-gM7"/>
+                            <constraint firstItem="z1v-yr-VJS" firstAttribute="centerX" secondItem="0Im-vT-0yU" secondAttribute="centerX" id="fhV-Ww-qMT"/>
+                            <constraint firstItem="0Im-vT-0yU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdX-bi-Edx"/>
+                            <constraint firstItem="0Im-vT-0yU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="kmX-c0-wmm"/>
+                            <constraint firstItem="0Im-vT-0yU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qBT-on-wLw"/>
+                            <constraint firstItem="z1v-yr-VJS" firstAttribute="top" secondItem="0Im-vT-0yU" secondAttribute="bottom" constant="50" id="tBB-Z3-xq3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="z1v-yr-VJS" id="DGF-9S-vbO"/>
+                        <outlet property="textField" destination="0Im-vT-0yU" id="1gn-Kt-y9a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
